@@ -40,5 +40,3 @@ def handler():
 
     # This will be automatically converted to JSON.
     return {'results': results}
-
-if __name__ == '__main__':
