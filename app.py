@@ -4,6 +4,7 @@ import whisper
 from tempfile import NamedTemporaryFile
 
 # Load the Whisper model:
+### TODO: Figure out howto download this as part of the dockerfile
 model = whisper.load_model('base')
 
 app = Flask(__name__)
@@ -26,7 +27,7 @@ def handler():
         # The file will get deleted when it drops out of scope.
         handle.save(temp)
         # Let's get the transcript of the temporary file.
-        result = model.transcribe(temp.name)
+        result = model.transcribe(temp.name, fp16=False)
 
         temp.close()
         os.unlink(temp.name)
@@ -39,3 +40,5 @@ def handler():
 
     # This will be automatically converted to JSON.
     return {'results': results}
+
+if __name__ == '__main__':
