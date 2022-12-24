@@ -1,6 +1,7 @@
 # Whisper-API
 Everything you need to build a OpenAI Whisper (Speech to Text Transcription ML model) API, and associated docker container.
 ![image](https://user-images.githubusercontent.com/36832027/209445003-ab3fc086-4d23-4f58-87ff-6b26f98ebc37.png)
+[Link](https://www.youtube.com/shorts/5VUEYktKI6s) to the audio transcribed above.  
 
 ### Getting started
 1. Clone this repo
